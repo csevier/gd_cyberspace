@@ -1,0 +1,75 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "HttpRouter",
+"class": "HttpFileRouter",
+"language": "GDScript",
+"path": "res://addons/godottpd/http_file_router.gd"
+}, {
+"base": "Reference",
+"class": "HttpRequest",
+"language": "GDScript",
+"path": "res://addons/godottpd/http_request.gd"
+}, {
+"base": "Reference",
+"class": "HttpResponse",
+"language": "GDScript",
+"path": "res://addons/godottpd/http_response.gd"
+}, {
+"base": "Reference",
+"class": "HttpRouter",
+"language": "GDScript",
+"path": "res://addons/godottpd/http_router.gd"
+}, {
+"base": "Node",
+"class": "HttpServer",
+"language": "GDScript",
+"path": "res://addons/godottpd/http_server.gd"
+}, {
+"base": "Node",
+"class": "Link",
+"language": "GDScript",
+"path": "res://addons/gd_cyberspace/link.gd"
+}, {
+"base": "HttpFileRouter",
+"class": "LinkRouter",
+"language": "GDScript",
+"path": "res://addons/gd_cyberspace/link_router.gd"
+} ]
+_global_script_class_icons={
+"HttpFileRouter": "",
+"HttpRequest": "",
+"HttpResponse": "",
+"HttpRouter": "",
+"HttpServer": "",
+"Link": "res://addons/gd_cyberspace/link.svg",
+"LinkRouter": ""
+}
+
+[application]
+
+config/name="gd_cyberspace"
+config/icon="res://icon.png"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
