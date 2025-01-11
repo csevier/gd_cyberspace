@@ -59,6 +59,14 @@ _global_script_class_icons={
 config/name="gd_cyberspace"
 config/icon="res://icon.png"
 
+[autoload]
+
+link_server="*res://addons/gd_cyberspace/link_server.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/gd_cyberspace/plugin.cfg", "res://addons/godottpd/plugin.cfg" )
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
